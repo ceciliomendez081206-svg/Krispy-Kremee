@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Log In - Smart Stall</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+  <div id="login">
+    <div class="login-card">
+      <div class="logo">
+        <img src="../assets/krispy-kreme-logo.webp" alt="Krispy Kreme Doughnuts">
+      </div>
+      <h2>Smart Stall</h2>
+      <p>Inventory and Ordering System</p>
+      <label for="user">Username</label>
+      <input id="user" placeholder="Enter your username" autocomplete="username">
+      <label for="pass">Password</label>
+      <input id="pass" type="password" placeholder="Enter your password" autocomplete="current-password">
+      <div class="login-err" id="loginErr"></div>
+      <button class="btn btn-block" onclick="login()">Log In</button>
+      <details class="login-foot">
+        <summary>Demo accounts</summary>
+        <div class="login-foot-accounts">
+          <span>Admin: <code>admin</code> / <code>admin123</code></span>
+          <span>Staff: <code>staff</code> / <code>staff123</code></span>
+        </div>
+      </details>
+  </div>
+  <div id="toast"></div>
+  <script src="../js/core.js"></script>
+  <script src="../js/settings.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/inventory.js"></script>
+  <script src="../js/sales.js"></script>
+  <script src="../js/forecasting.js"></script>
+  <script src="../js/deliveries.js"></script>
+  <script src="../js/freshness.js"></script>
+  <script src="../js/calendar.js"></script>
+  <script src="../js/reports.js"></script>
+  <script>
+    document.getElementById("pass").addEventListener("keydown", e => {
+      if (e.key === "Enter") login();
+    });
+
+    if (sessionStorage.getItem("ss_user")) {
+      location.replace("dashboard.html");
+    }
+  </script>
+</body>
+</html>

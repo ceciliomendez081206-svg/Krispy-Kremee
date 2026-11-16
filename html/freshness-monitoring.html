@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Freshness Monitoring - Smart Stall</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/freshness.css">
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="../assets/krispy-kreme-logo.webp" alt="Krispy Kreme Doughnuts">
+      </div>
+      <nav class="nav">
+        <a href="dashboard.html" data-page="dashboard">Dashboard</a>
+        <a href="inventory.html" data-page="inventory">Inventory</a>
+        <a href="sales-history.html" data-page="sales">Sales History</a>
+        <a href="order-recommendation.html" data-page="order">Quantity Recommendation</a>
+        <a href="forecasting.html" data-page="forecasting">Demand Forecasting</a>
+        <a href="deliveries.html" data-page="deliveries">Deliveries</a>
+        <a href="freshness-monitoring.html" data-page="freshness">Freshness Monitoring</a>
+        <a href="drivers-promo-calendar.html" data-page="calendar">Drivers &amp; Promo Calendar</a>
+        <a href="reports.html" data-page="reports">Reports</a>
+      </nav>
+      <div class="side-bottom">
+        <a href="settings.html" data-page="settings">Settings</a>
+        <a onclick="logout()">Logout</a>
+      </div>
+    </aside>
+    <main class="main" id="content"></main>
+  </div>
+  <div id="toast"></div>
+  <script src="../js/core.js"></script>
+  <script src="../js/settings.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/inventory.js"></script>
+  <script src="../js/sales.js"></script>
+  <script src="../js/forecasting.js"></script>
+  <script src="../js/deliveries.js"></script>
+  <script src="../js/freshness.js"></script>
+  <script src="../js/calendar.js"></script>
+  <script src="../js/reports.js"></script>
+  <script>
+    const PAGE = "freshness";
+
+    if (!sessionStorage.getItem("ss_user")) {
+      location.replace("index.html");
+    } else {
+      render();
+    }
+  </script>
+</body>
+</html>

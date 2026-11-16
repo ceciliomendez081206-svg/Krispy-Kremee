@@ -1,0 +1,50 @@
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.inventory-tabs a {
+  text-decoration: none;
+}
+
+.inventory-section {
+  scroll-margin-top: 16px;
+}
+
+.tab {
+  padding: 10px 16px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--dark);
+  font-size: var(--font-size-body);
+}
+
+.tab.on {
+  background: var(--pale);
+  border: 2px solid var(--dark);
+  font-weight: var(--font-weight-bold);
+}
+
+.search {
+  width: 280px;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: var(--font-size-body);
+}
+
+body[data-theme="dark"] .tab {
+  color: var(--color-text-heading);
+}
+
+body[data-theme="dark"] .main .tab {
+  background: #202c26;
+  color: var(--color-text-primary);
+}
+
+body[data-theme="dark"] .main .tab.on {
+  background: var(--pale);
+}

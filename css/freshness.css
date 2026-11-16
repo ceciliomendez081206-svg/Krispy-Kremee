@@ -1,0 +1,5 @@
+.tbl-wrap td .sm {
+  margin-top: 4px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-supporting);
+}
